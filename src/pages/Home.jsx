@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MeetingCard from "../components/MeetingCard";
 import "./Home.css";
-
 const Home = () => {
   const [loading, setLoading] = useState(true);
   const [meetings, setMeetings] = useState([]);
@@ -47,20 +46,45 @@ const Home = () => {
     <>
       <div className={loading === true ? "loader" : ""}></div>
       <div className="conatiner-card">
-        {meetings.map((curElm) => {
+        {
+        
+        meetings.map((curElm) => {
           const { date, time } = formatDate(curElm.date);
           return (
+            <>
             <MeetingCard
               title={curElm.title}
               desc={curElm.desc}
               date={date}
               time={time}
-            />
+              />
+              </>
           );
         })}
+
+
+        
       </div>
     </>
   );
 };
 
 export default Home;
+
+// filter method
+// {
+        
+//   meetings.filter((elm)=>{
+//     let today = new Date();
+//     return(new Date(elm.date)>today)
+//   }).map((curElm) => {
+//     const { date, time } = formatDate(curElm.date);
+//     return (
+//       <MeetingCard
+//         title={curElm.title}
+//         desc={curElm.desc}
+//         date={date}
+//         time={time}
+//       />
+//     );
+//   })}
