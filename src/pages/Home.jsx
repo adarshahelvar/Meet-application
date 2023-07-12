@@ -1,8 +1,11 @@
 import React from 'react'
+import MeetingCard from '../components/MeetingCard'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+        <MeetingCard />
+    </div>
   )
 }
 
