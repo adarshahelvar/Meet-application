@@ -2,20 +2,24 @@ import React from "react";
 import "./MeetingCard.css";
 import meetingImage from "../images/meeting image.jpg";
 
-const MeetingCard = () => {
+const MeetingCard = (props) => {
+  console.log(props)
   return (
     <div className="meeting-card">
       <img
         src={meetingImage}
         className="meeting-card-image"
-        alt="Meeting image"
+        alt="Meeting img"
         height="100px"
       />
-      <h4>Why this meeting is importent</h4>
+      <div className="title-date">
+      <h4>{props.title}</h4>
+      <h6>{props.date}</h6>
+      <h6>{props.time}</h6>
+      </div>
+        
       <p className="meet-desc">
-        Meeting help you remember the important details from a
-        meeting and any action items that you or other team members need to
-        complete before the next meeting.
+       {props.desc}
       </p>
       <button type="button" className="btn-meetingcard">
         Join Meeting

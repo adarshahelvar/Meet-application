@@ -1,0 +1,23 @@
+.conatiner-card {
+    width: 900px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.loader {
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background:#59EFF4;
+    -webkit-mask:radial-gradient(circle closest-side at 50% 40%,#0000 94%, #000);
+    transform-origin: 50% 40%;
+    animation: loading 1s infinite linear;
+  }
+  
+  @keyframes loading {
+    100% {transform: rotate(1turn)}
+  }
