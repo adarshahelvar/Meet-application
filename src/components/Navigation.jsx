@@ -1,15 +1,21 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-
+import React from "react";
+import "./Navigation.css";
+import { Link } from "react-router-dom";
+import Logo from "../images/meet logo.png"
 const Navigation = () => {
   return (
-    <nav>
-        <h2>Meet applucation...!</h2>
-        <Link to="/home">Home</Link>
-        <Link to="/myMeeting">My Meetings</Link>
-        <Link to="/addMeeting">Add Meetings</Link>
-    </nav>
-  )
-}
+    <>
+      <h2>Meet applucation...!</h2>
+      <nav>
+        <img src={Logo} className="" alt="logo" width="150px" height="50px"/>
+        <div className="link-parent">
+        <Link to="/home" className="link">Home</Link>
+        <Link to="/home" className="link">My Meetings</Link>
+        <Link to="/addMeeting" className="link">Add Meetings</Link>
+        </div>
+      </nav>
+    </>
+  );
+};
 
-export default Navigation
+export default Navigation;
